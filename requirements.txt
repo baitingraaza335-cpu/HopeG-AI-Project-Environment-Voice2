@@ -1,0 +1,4 @@
+﻿Flask
+python-dotenv
+groq
+google-genai

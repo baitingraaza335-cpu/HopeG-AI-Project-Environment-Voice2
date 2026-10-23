@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HopeG AI | Health &amp; Environment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="navbar">
+    <a href="#home" class="brand">
+        <span class="brand-icon">H</span>
+        <span>HopeG <strong>AI</strong></span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#home"
+           data-en="Home"
+           data-hi="होम">Home</a>
+
+        <a href="#services"
+           data-en="Our Services"
+           data-hi="हमारी सेवाएँ">Our Services</a>
+
+        <a href="#about"
+           data-en="About Us"
+           data-hi="हमारे बारे में">About Us</a>
+    </nav>
+
+    <select id="languageSelect" aria-label="Choose language">
+        <option value="en">🇬🇧 English</option>
+        <option value="hi">🇮🇳 हिन्दी</option>
+        
+    </select>
+</header>
+
+
+<main>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="eyebrow"
+              data-en="✦ AI FOR A BETTER TOMORROW"
+              data-hi="✦ बेहतर कल के लिए AI">
+            ✦AI FOR A BETTER TOMORROW
+        </span>
+
+      <h1 data-en="One AI <span>Two Worlds.</span> Infinite Hope."
+    data-hi="एक AI, <span>दो दुनिया।</span> अनंत आशा।">
+    One AI <span>Two Worlds.</span> Infinite Hope.
+</h1>
+
+
+        <p data-en="Discover AI-powered tools for health and environmental awareness. One platform, two helpful solutions."
+           data-hi="स्वास्थ्य और पर्यावरण जागरूकता के लिए AI टूल इस्तेमाल करें। एक प्लेटफॉर्म, दो उपयोगी समाधान।">
+            Discover AI-powered tools for health and environmental awareness.
+            One platform, two helpful solutions.
+        </p>
+
+        <a href="#services"
+           class="primary-btn"
+           data-en="Explore AI Tools →"
+           data-hi="AI टूल देखें →">
+            Explore AI Tools →
+        </a>
+
+        <div class="hero-stats">
+            <div>
+                <strong>02</strong>
+                <span data-en="AI Solutions" data-hi="AI समाधान">AI Solutions</span>
+            </div>
+
+            <div>
+                <strong>24/7</strong>
+                <span data-en="Access Anytime" data-hi="कभी भी उपयोग">Access Anytime</span>
+            </div>
+
+            <div>
+                <strong>01</strong>
+                <span data-en="Shared Mission" data-hi="एक साझा लक्ष्य">Shared Mission</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Animated logo structure -->
+    <div class="hero-visual">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="center-logo">
+            <img
+                class="logo-reference-image"
+                src="{{ url_for('static', filename='images/hopeg-ai-logo.png') }}"
+                alt="HopeG AI circular logo"
+                decoding="async">
+
+            <div class="logo-rings" aria-hidden="true">
+                <span class="logo-ring logo-ring-one"></span>
+                <span class="logo-ring logo-ring-two"></span>
+                <span class="logo-ring logo-ring-three"></span>
+            </div>
+        </div>
+
+        <div class="floating-card health-float">
+            <span class="floating-card-dot" aria-hidden="true"></span>
+            <span class="float-icon">♡</span>
+            <div>
+                <strong data-en="Health AI" data-hi="हेल्थ AI">Health AI</strong>
+                <small data-en="Care starts here" data-hi="देखभाल यहाँ से">Care starts here</small>
+            </div>
+        </div>
+
+        <div class="floating-card environment-float">
+            <span class="floating-card-dot" aria-hidden="true"></span>
+            <span class="float-icon">♧</span>
+            <div>
+                <strong data-en="Environment AI" data-hi="पर्यावरण AI">Environment AI</strong>
+                <small data-en="Protect nature" data-hi="प्रकृति की रक्षा">Protect nature</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+<section class="services section" id="services">
+
+    <div class="section-heading">
+
+        <span class="eyebrow"
+              data-en="OUR AI SOLUTIONS"
+              data-hi="हमारे AI समाधान">
+            OUR AI SOLUTIONS
+        </span>
+
+        <h2 data-en="How can we <span>help you?</span>"
+            data-hi="हम आपकी <span>कैसे मदद करें?</span>">
+            How can we <span>help you?</span>
+        </h2>
+
+        <p data-en="Choose a service to get started."
+           data-hi="शुरू करने के लिए एक सेवा चुनें।">
+            Choose a service to get started.
+        </p>
+    </div>
+
+
+    <div class="service-grid">
+
+        <!-- HEALTH CARD -->
+        <article class="service-card health-card">
+
+            <div class="card-image health-image">
+                <div class="image-label">♡ HEALTH INTELLIGENCE</div>
+
+                <img
+                    class="scanner-reference-image health-scan-image"
+                    src="{{ url_for('static', filename='images/health-body-scan.png') }}"
+                    alt="Full-body human scan surrounded by holographic scanning rings"
+                    loading="lazy">
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-tag"
+                      data-en="PERSONAL WELLNESS"
+                      data-hi="स्वास्थ्य देखभाल">
+                    PERSONAL WELLNESS
+                </span>
+
+                <h3 data-en="Health AI Scanner"
+                    data-hi="हेल्थ AI स्कैनर">
+                    Health AI Scanner
+                </h3>
+
+                <p data-en="Upload a photo of a visible skin concern or describe your health concern to explore general health information."
+                   data-hi="त्वचा की दिखाई देने वाली समस्या की फोटो अपलोड करें या अपनी स्वास्थ्य समस्या लिखकर सामान्य जानकारी पाएँ।">
+                    Upload a photo of a visible skin concern or describe your health concern to explore general health information.
+                </p>
+
+                <ul>
+                    <li data-en="📷 Photo upload & camera"
+                        data-hi="📷 फोटो अपलोड और कैमरा">
+                        📷 Photo upload &amp; camera
+                    </li>
+
+                    <li data-en="✍️ Describe symptoms in text"
+                        data-hi="✍️ लक्षणों को टेक्स्ट में लिखें">
+                        ✍️ Describe symptoms in text
+                    </li>
+
+                    <li data-en="♡ General care guidance"
+                        data-hi="♡ सामान्य देखभाल की जानकारी">
+                        ♡ General care guidance
+                    </li>
+                </ul>
+
+                <button class="primary-btn full-btn"
+                        onclick="openScanner('health')"
+                        data-en="Open Health Scanner →"
+                        data-hi="हेल्थ स्कैनर खोलें →">
+                    Open Health Scanner →
+                </button>
+
+            </div>
+        </article>
+
+
+        <!-- ENVIRONMENT CARD -->
+        <article class="service-card environment-card">
+
+            <div class="card-image environment-image">
+                <div class="image-label">♧ ENVIRONMENT DETECTOR</div>
+
+                <img
+                    class="scanner-reference-image environment-scan-image"
+                    src="{{ url_for('static', filename='images/environment-detector.png') }}"
+                    alt="Environment detector scanning vegetation"
+                    loading="lazy">
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-tag"
+                      data-en="ENVIRONMENT MONITORING"
+                      data-hi="पर्यावरण निगरानी">
+                    ENVIRONMENT MONITORING
+                </span>
+
+                <h3 data-en="Environment Detector"
+                    data-hi="पर्यावरण डिटेक्टर">
+                    Environment Detector
+                </h3>
+
+                <p data-en="Upload a photo or describe a visible environmental concern to explore observations and safe next steps."
+                   data-hi="फोटो अपलोड करें या पर्यावरण में दिखाई देने वाली समस्या लिखें, ताकि अवलोकन और सुरक्षित अगले कदम जान सकें।">
+                    Upload a photo or describe a visible environmental concern to explore observations and safe next steps.
+                </p>
+
+                <ul>
+                    <li data-en="📷 Environment photo & camera"
+                        data-hi="📷 पर्यावरण की फोटो और कैमरा">
+                        📷 Environment photo &amp; camera
+                    </li>
+
+                    <li data-en="✍️ Describe visible conditions"
+                        data-hi="✍️ दिखाई देने वाली स्थिति लिखें">
+                        ✍️ Describe visible conditions
+                    </li>
+
+                    <li data-en="🌿 Environmental guidance"
+                        data-hi="🌿 पर्यावरण संबंधी मार्गदर्शन">
+                        🌿 Environmental guidance
+                    </li>
+                </ul>
+
+                <button class="primary-btn full-btn"
+                        onclick="openScanner('environment')"
+                        data-en="Open Environment Detector →"
+                        data-hi="पर्यावरण डिटेक्टर खोलें →">
+                    Open Environment Detector →
+                </button>
+
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- ================= AI SCANNER ================= -->
+<section class="scanner-section section" id="scanner">
+
+    <div class="section-heading">
+
+        <span class="eyebrow"
+              data-en="AI ANALYSIS CENTRE"
+              data-hi="AI विश्लेषण केंद्र">
+            AI ANALYSIS CENTRE
+        </span>
+
+        <h2 id="scannerTitle">
+            Start your <span>AI scan</span>
+        </h2>
+
+        <p id="scannerDescription">
+            Choose a photo or describe your concern.
+        </p>
+
+    </div>
+
+
+    <div class="scanner-box">
+
+        <!-- SCANNER TYPE TABS -->
+        <div class="scanner-tabs">
+
+            <button id="healthTab"
+                    class="tab-btn active"
+                    onclick="openScanner('health')">
+                ♡ Health AI
+            </button>
+
+            <button id="environmentTab"
+                    class="tab-btn"
+                    onclick="openScanner('environment')">
+                🌿 Environment Detector
+            </button>
+
+        </div>
+
+
+        <!-- ANALYSIS MODE TABS -->
+        <div class="scanner-mode-tabs">
+
+            <button type="button"
+                    id="imageModeBtn"
+                    class="tab-btn active"
+                    onclick="setAnalysisMode('image')"
+                    data-en="📷 Image Scanner"
+                    data-hi="📷 इमेज स्कैनर">
+                📷 Image Scanner
+            </button>
+
+            <button type="button"
+                    id="textModeBtn"
+                    class="tab-btn"
+                    onclick="setAnalysisMode('text')"
+                    data-en="✍️ Text Analysis"
+                    data-hi="✍️ टेक्स्ट विश्लेषण">
+                ✍️ Text Analysis
+            </button>
+
+            <button type="button"
+                    id="voiceModeBtn"
+                    class="tab-btn"
+                    onclick="setAnalysisMode('voice')"
+                    data-en="🎙 Voice Input"
+                    data-hi="🎙 आवाज़ से लिखें">
+                🎙 Voice Input
+            </button>
+
+        </div>
+
+
+        <!-- IMAGE ANALYSIS PANEL -->
+        <div id="imageAnalysisPanel">
+
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-symbol">↑</div>
+
+                <h3 data-en="Upload your image"
+                    data-hi="अपनी फोटो अपलोड करें">
+                    Upload your image
+                </h3>
+
+                <p data-en="Choose a clear photo from your device or use your camera."
+                   data-hi="अपने डिवाइस से साफ फोटो चुनें या कैमरे का उपयोग करें।">
+                    Choose a clear photo from your device or use your camera.
+                </p>
+
+                <input type="file"
+                       id="imageInput"
+                       accept="image/jpeg,image/png,image/webp"
+                       hidden>
+
+                <div class="upload-buttons">
+
+                    <button type="button"
+                            class="primary-btn"
+                            onclick="document.getElementById('imageInput').click()"
+                            data-en="📁 Choose Photo"
+                            data-hi="📁 फोटो चुनें">
+                        📁 Choose Photo
+                    </button>
+
+                    <button type="button"
+                            class="secondary-btn"
+                            onclick="openCamera()"
+                            data-en="📷 Use Camera"
+                            data-hi="📷 कैमरा खोलें">
+                        📷 Use Camera
+                    </button>
+
+                </div>
+
+                <img id="imagePreview"
+                     alt="Selected image preview"
+                     hidden>
+
+                <button type="button"
+                        id="removeImage"
+                        class="secondary-btn"
+                        onclick="clearImage()"
+                        hidden
+                        data-en="Remove Photo"
+                        data-hi="फोटो हटाएँ">
+                    Remove Photo
+                </button>
+
+            </div>
+
+
+            <!-- CAMERA PANEL -->
+            <div id="cameraBox" hidden>
+
+                <video id="cameraVideo"
+                       autoplay
+                       playsinline>
+                </video>
+
+                <div class="upload-buttons">
+
+                    <button type="button"
+                            class="primary-btn"
+                            onclick="capturePhoto()"
+                            data-en="Capture Photo"
+                            data-hi="फोटो लें">
+                        Capture Photo
+                    </button>
+
+                    <button type="button"
+                            class="secondary-btn"
+                            onclick="closeCamera()"
+                            data-en="Close Camera"
+                            data-hi="कैमरा बंद करें">
+                        Close Camera
+                    </button>
+
+                </div>
+
+                <canvas id="cameraCanvas" hidden></canvas>
+
+            </div>
+
+
+            <button type="button"
+                    class="primary-btn analyze-btn"
+                    id="analyzeBtn"
+                    onclick="analyzeImage()"
+                    data-en="Analyze Image →"
+                    data-hi="फोटो का विश्लेषण करें →">
+                Analyze Image →
+            </button>
+
+        </div>
+
+
+        <!-- TEXT ANALYSIS PANEL -->
+        <div id="textAnalysisPanel" hidden>
+
+            <div class="text-analysis-area">
+
+                <label for="textDescription"
+                       id="textInputLabel"
+                       data-en="Describe your concern"
+                       data-hi="अपनी समस्या का विवरण दें">
+                    Describe your concern
+                </label>
+
+                <p id="textInputHelp"
+                   data-en="Write the details clearly. Do not include private personal information."
+                   data-hi="समस्या का स्पष्ट विवरण लिखें। निजी व्यक्तिगत जानकारी न लिखें।">
+                    Write the details clearly. Do not include private personal information.
+                </p>
+
+                <textarea id="textDescription"
+                          rows="6"
+                          maxlength="5000"
+                          placeholder="Describe your symptoms or environmental concern..."
+                          data-placeholder-en="Describe your symptoms or environmental concern..."
+                          data-placeholder-hi="अपने लक्षण या पर्यावरण की समस्या यहाँ लिखें..."
+                          aria-describedby="textInputHelp"></textarea>
+
+                <div class="text-analysis-footer">
+                    <span id="textCharCount">0 / 5000</span>
+
+                    <button type="button"
+                            class="primary-btn analyze-btn"
+                            id="analyzeTextBtn"
+                            onclick="analyzeText()"
+                            data-en="Analyze Text →"
+                            data-hi="टेक्स्ट का विश्लेषण करें →">
+                        Analyze Text →
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VOICE INPUT PANEL -->
+        <div id="voiceAnalysisPanel" hidden>
+
+            <div class="text-analysis-area">
+
+                <label for="voiceTranscript"
+                       data-en="Speak your concern"
+                       data-hi="अपनी समस्या बोलें">
+                    Speak your concern
+                </label>
+
+                <p id="voiceInputHelp"
+                   data-en="Choose Start Microphone, speak clearly, then review or edit the transcript before analysis."
+                   data-hi="माइक्रोफ़ोन शुरू करें, साफ़ बोलें, फिर विश्लेषण से पहले लिखे गए टेक्स्ट को जाँचें या बदलें।">
+                    Choose Start Microphone, speak clearly, then review or edit the transcript before analysis.
+                </p>
+
+                <textarea id="voiceTranscript"
+                          rows="6"
+                          maxlength="5000"
+                          placeholder="Your spoken words will appear here..."
+                          data-placeholder-en="Your spoken words will appear here..."
+                          data-placeholder-hi="आपके बोले हुए शब्द यहाँ दिखाई देंगे..."
+                          aria-describedby="voiceInputHelp"></textarea>
+
+                <div class="upload-buttons voice-controls">
+                    <button type="button"
+                            id="startVoiceBtn"
+                            class="primary-btn"
+                            onclick="startVoiceInput()"
+                            data-en="🎙 Start Microphone"
+                            data-hi="🎙 माइक्रोफ़ोन शुरू करें">
+                        🎙 Start Microphone
+                    </button>
+
+                    <button type="button"
+                            id="stopVoiceBtn"
+                            class="secondary-btn"
+                            onclick="stopVoiceInput()"
+                            disabled
+                            data-en="⏹ Stop"
+                            data-hi="⏹ रोकें">
+                        ⏹ Stop
+                    </button>
+                </div>
+
+                <div class="text-analysis-footer">
+                    <span id="voiceCharCount">0 / 5000</span>
+
+                    <button type="button"
+                            class="primary-btn analyze-btn"
+                            id="analyzeVoiceBtn"
+                            onclick="analyzeVoice()"
+                            data-en="Analyze Voice →"
+                            data-hi="आवाज़ के टेक्स्ट का विश्लेषण करें →">
+                        Analyze Voice →
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATUS MESSAGE -->
+        <div id="scanMessage"
+             class="scan-message"
+             role="status"
+             aria-live="polite">
+        </div>
+
+
+        <!-- AI RESULT -->
+        <div id="resultBox"
+             class="result-box"
+             aria-live="polite"
+             hidden>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="about-section section" id="about">
+
+    <div class="about-symbol">✳</div>
+
+    <span class="eyebrow"
+          data-en="OUR PURPOSE"
+          data-hi="हमारा उद्देश्य">
+        OUR PURPOSE
+    </span>
+
+    <h2 data-en="Technology with a <span>human purpose.</span>"
+        data-hi="<span>मानव कल्याण</span> के लिए तकनीक।">
+        Technology with a <span>human purpose.</span>
+    </h2>
+
+    <p data-en="HopeG AI aims to make helpful information more accessible for health and environmental awareness."
+       data-hi="HopeG AI का उद्देश्य स्वास्थ्य और पर्यावरण जागरूकता के लिए उपयोगी जानकारी को अधिक सुलभ बनाना है।">
+        HopeG AI aims to make helpful information more accessible for health and environmental awareness.
+    </p>
+
+    <p class="health-disclaimer"
+       data-en="Health information is for awareness only and is not a medical diagnosis. Consult a qualified healthcare professional for medical concerns."
+       data-hi="स्वास्थ्य संबंधी जानकारी केवल जागरूकता के लिए है, यह चिकित्सकीय निदान नहीं है। स्वास्थ्य समस्या होने पर योग्य डॉक्टर से सलाह लें।">
+        Health information is for awareness only and is not a medical diagnosis.
+        Consult a qualified healthcare professional for medical concerns.
+    </p>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <a href="#home" class="brand">
+        <span class="brand-icon">H</span>
+        <span>HopeG <strong>AI</strong></span>
+    </a>
+
+    <p>
+        © <span id="year"></span> HopeG AI.
+        <span data-en="Built for a better tomorrow."
+              data-hi="बेहतर कल के लिए।">
+            Built for a better tomorrow.
+        </span>
+    </p>
+
+    <p class="creator-credit">
+        Created by Suman Sah Kanu
+    </p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
